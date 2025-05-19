@@ -1,0 +1,60 @@
+/* Seletores de elemento */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #cac718;
+}
+
+nav ul {
+  background-color: #d1af18;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Seletores de classe */
+.imagem-centro {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+.tabela-titulos {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.tabela-titulos th,
+.tabela-titulos td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Seletor de ID */
+#rodape {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
