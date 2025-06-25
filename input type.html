@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cafeteria Aroma – Trabalhe Conosco</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cafeteria Coffe Black</h1>
+      <p>
+        Estamos contratando! Preencha o formulário abaixo e junte-se à nossa
+        equipe.
+      </p>
+
+      <form id="formulario">
+        <div>
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div>
+          <label for="idade">Idade:</label>
+          <input
+            type="number"
+            id="idade"
+            name="idade"
+            min="16"
+            max="99"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="telefone">Telefone:</label>
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="(DDD) 00000-0000"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="cargo">Cargo Desejado:</label>
+          <select id="cargo" name="cargo" required>
+            <option value="">Selecione...</option>
+            <option value="atendente">Atendente</option>
+            <option value="barista">Barista</option>
+            <option value="cozinha">Auxiliar de Cozinha</option>
+            <option value="limpeza">Limpeza</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="exp">Experiência anterior:</label>
+          <textarea
+            id="exp"
+            name="exp"
+            rows="3"
+            placeholder="Descreva brevemente sua experiência..."
+            required
+          ></textarea>
+        </div>
+
+        <div>
+          <label for="cv">Anexar Currículo:</label>
+          <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" />
+        </div>
+
+        <div>
+          <label for="disponibilidade">Disponibilidade de Horário:</label>
+          <input
+            type="text"
+            id="disponibilidade"
+            name="disponibilidade"
+            placeholder="Ex: manhã, tarde, noite"
+          />
+        </div>
+
+        <button type="submit">Enviar Candidatura</button>
+      </form>
+
+      <div id="mensagem" class="oculto">
+        <div class="checkmark-container">
+          <div class="checkmark"></div>
+        </div>
+        <p class="mensagem-texto"></p>
+      </div>
+    </div>
+
+    <script>
+      const formulario = document.getElementById("formulario");
+      const mensagem = document.getElementById("mensagem");
+
+      formulario.addEventListener("submit", function (e) {
+        e.preventDefault();
+        mensagem.classList.remove("oculto");
+        mensagem.classList.add("visivel");
+        formulario.reset();
+      });
+    </script>
+  </body>
+</html>
