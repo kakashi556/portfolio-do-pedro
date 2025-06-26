@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+  line-height: 1.6;
+  padding-top: 80px;
+}
+
+/* Estilização do header principal */
+.site-header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+.site-header ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.site-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-header a:hover {
+  color: #61b5ff;
+}
+
+/* Container principal */
+.container {
+  max-width: 1010px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header de artigo */
+.article-header {
+  border-bottom: 2px solid #37a2ff;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+/* Header de seção */
+.section-header {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+/* Exemplo de header hero */
+.hero-header {
+  background-color: #37a2ff;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  margin-bottom: 40px;
+}
+
+ul {
+    margin: 0 20px;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
