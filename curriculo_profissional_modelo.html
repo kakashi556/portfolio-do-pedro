@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículo Profissional - Modelo</title>
+  <style>
+    /* ---------- Reset & Base ---------- */
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", Arial, Helvetica, sans-serif;
+      color: #1a1a1a;
+      line-height: 1.35;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { margin: 0 0 .4rem 0; }
+    p { margin: 0 0 .5rem 0; }
+    ul { margin: .25rem 0 .75rem 1.1rem; padding: 0; }
+
+    /* ---------- Page & Layout ---------- */
+    :root {
+      --accent: #2563eb;     /* azul profissional */
+      --muted: #6b7280;      /* cinza */
+      --bgsoft: #f8fafc;
+      --line: #e5e7eb;
+    }
+
+    @page {
+      size: A4;
+      margin: 16mm 14mm 16mm 14mm;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      background: white;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 22px;
+    }
+
+    /* ---------- Header ---------- */
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 20px;
+      background: linear-gradient(90deg, var(--bgsoft), #ffffff);
+      border-bottom: 1px solid var(--line);
+    }
+    .name {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+    .role {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 2px;
+      font-weight: 600;
+    }
+    .contacts {
+      text-align: right;
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .contacts a { text-decoration: underline; }
+
+    /* ---------- Sidebar ---------- */
+    .sidebar {
+      padding: 16px 18px 20px 18px;
+      border-right: 1px solid var(--line);
+      background: #ffffff;
+    }
+    .section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--accent);
+      margin: 12px 0 8px 0;
+      font-weight: 800;
+    }
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--line);
+      padding: 6px 9px;
+      border-radius: 999px;
+      margin: 4px 6px 0 0;
+      font-size: 12px;
+      font-weight: 600;
+      background: #fff;
+    }
+    .info-list p {
+      margin: 4px 0;
+      font-size: 13px;
+      color: #111827;
+    }
+    .muted { color: var(--muted); }
+
+    /* ---------- Content ---------- */
+    .content {
+      padding: 14px 18px 18px 2px;
+    }
+    .block { margin-bottom: 18px; }
+    .item {
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      background: #fff;
+    }
+    .item h3 {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .item .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .item ul { margin-left: 1.05rem; }
+    .item li { margin: 4px 0; }
+
+    /* ---------- Progress Bars (Skills) ---------- */
+    .skill {
+      display: grid;
+      grid-template-columns: 1fr 56px;
+      align-items: center;
+      gap: 10px;
+      margin: 7px 0;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .bar {
+      height: 7px;
+      background: var(--bgsoft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar > span {
+      display: block;
+      height: 100%;
+      width: var(--w, 60%);
+      background: var(--accent);
+    }
+
+    /* ---------- Footer Note ---------- */
+    .footer-note {
+      margin-top: 8px;
+      font-size: 11.5px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ---------- Responsive (for on-screen editing) ---------- */
+    @media screen and (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      .contacts { text-align: left; }
+      .sidebar { border-right: none; border-bottom: 1px solid var(--line); }
+      .content { padding-left: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page card">
+    <!-- Header -->
+    <header class="header">
+      <div>
+        <div class="name">SEU NOME COMPLETO</div>
+        <div class="role">Título profissional ou área de atuação</div>
+      </div>
+      <div class="contacts">
+        <div>📍 Cidade/UF</div>
+        <div>📞 (00) 00000-0000</div>
+        <div>✉️ seu.email@exemplo.com</div>
+        <div>🔗 linkedin.com/in/seuuser • portfólio (opcional)</div>
+      </div>
+    </header>
+
+    <!-- Body -->
+    <main class="grid">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="section-title">Resumo</div>
+        <p>Profissional com [X] anos de experiência em [área/segmento].
+          Foco em [competências-chave]. Histórico de [resultados/conquistas].
+          Em busca de oportunidade para [objetivo].</p>
+
+        <div class="section-title">Competências</div>
+        <div class="skill">
+          <span>Gestão de Projetos</span>
+          <div class="bar"><span style="--w: 85%"></span></div>
+        </div>
+        <div class="skill">
+          <span>Excel / Google Sheets</span>
+          <div class="bar"><span style="--w: 80%"></span></div>
+        </div>
+        <div class="skill">
+          <span>Comunicação</span>
+          <div class="bar"><span style="--w: 90%"></span></div>
+        </div>
+        <div class="skill">
+          <span>Inglês</span>
+          <div class="bar"><span style="--w: 70%"></span></div>
+        </div>
+
+        <div class="section-title">Habilidades Técnicas</div>
+        <span class="badge">Pacote Office</span>
+        <span class="badge">Power BI</span>
+        <span class="badge">SQL</span>
+        <span class="badge">CRM</span>
+
+        <div class="section-title">Idiomas</div>
+        <div class="info-list">
+          <p><strong>Inglês:</strong> Intermediário</p>
+          <p><strong>Espanhol:</strong> Básico</p>
+        </div>
+
+        <div class="section-title">Links</div>
+        <div class="info-list">
+          <p><a href="#">LinkedIn</a></p>
+          <p><a href="#">Portfólio</a></p>
+          <p><a href="#">GitHub</a></p>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <section class="content">
+        <div class="block">
+          <h2 class="section-title">Experiência Profissional</h2>
+
+          <div class="item">
+            <h3>Nome da Empresa • Cargo</h3>
+            <div class="meta">
+              <span>Cidade/UF</span>
+              <span>Jan/2023 — Atual</span>
+            </div>
+            <ul>
+              <li>Responsável por [atividade principal] com foco em [resultado].</li>
+              <li>Implementou [projeto/ação] que gerou [impacto mensurável].</li>
+              <li>Colaborou com times de [área] para [objetivo].</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h3>Empresa Anterior • Cargo</h3>
+            <div class="meta">
+              <span>Cidade/UF</span>
+              <span>Fev/2021 — Dez/2022</span>
+            </div>
+            <ul>
+              <li>Atuou em [processo/rotina], reduzindo [indicador] em [X%].</li>
+              <li>Suporte a [stakeholders/clientes] garantindo [SLA/NPS].</li>
+              <li>Preparou relatórios e dashboards para tomada de decisão.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="block">
+          <h2 class="section-title">Formação Acadêmica</h2>
+
+          <div class="item">
+            <h3>Curso • Instituição</h3>
+            <div class="meta">
+              <span>Concluído em 2024</span>
+              <span>Modalidade: Presencial/EAD</span>
+            </div>
+            <p>Principais disciplinas: [disciplina 1], [disciplina 2], [disciplina 3].</p>
+          </div>
+        </div>
+
+        <div class="block">
+          <h2 class="section-title">Cursos & Certificações</h2>
+
+          <div class="item">
+            <h3>Nome do Curso/Certificação</h3>
+            <div class="meta">
+              <span>Instituição</span>
+              <span>2024</span>
+              <span>Carga horária: 40h</span>
+            </div>
+            <p>Descrição breve do conteúdo e competências desenvolvidas.</p>
+          </div>
+        </div>
+
+        <div class="block">
+          <h2 class="section-title">Projetos (Opcional)</h2>
+
+          <div class="item">
+            <h3>Projeto • Papel</h3>
+            <div class="meta">
+              <span>Link: seuportfolio.com/projeto</span>
+              <span>2023</span>
+            </div>
+            <ul>
+              <li>Descrição do desafio, abordagem e resultados.</li>
+              <li>Principais tecnologias ou ferramentas utilizadas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="block">
+          <h2 class="section-title">Informações Adicionais</h2>
+          <div class="item">
+            <ul>
+              <li>Disponibilidade: Integral/Parcial/Turnos</li>
+              <li>CNH: Categoria B (se aplicável)</li>
+              <li>Trabalho voluntário: [organização] — [papel] — [período]</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <p class="footer-note">
+      Dica: para gerar o PDF, abra este arquivo no navegador, pressione <strong>Ctrl/Cmd + P</strong>, selecione <em>Salvar como PDF</em>, e ative as opções de margens padrão e gráficos de fundo (background).
+    </p>
+  </div>
+</body>
+</html>
